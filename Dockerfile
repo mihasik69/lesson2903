@@ -3,7 +3,8 @@ RUN apt-get update
 RUN apt-get install default-jdk -y
 RUN apt-get install git -y
 RUN apt-get install maven -y
-RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz  -O /tmp/tomcat.tar.gz
+RUN apt-get install wget -y
+RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.44/* /usr/local/tomcat/
 WORKDIR /home/sampleTest
