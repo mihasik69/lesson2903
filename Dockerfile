@@ -7,6 +7,6 @@ RUN mkdir /home/sampleTest
 WORKDIR /home/sampleTest
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f "./boxfuse-sample-java-war-hello/pom.xml" package
-RUN cp ./boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/docker.war
+RUN cp ./boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/hello-1.0.war
 WORKDIR /usr/local/tomcat
 EXPOSE 8080
