@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install default-jdk -y
 RUN apt-get install git -y
 RUN apt-get install maven -y
-RUN apt-get install tomcat7 -y
+RUN apt-get install tomcat9 -y
 RUN rm -rf /home/sampleTest
 RUN mkdir /home/sampleTest
 RUN cd /home/sampleTest
