@@ -11,4 +11,4 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f "/boxfuse-sample-java-war-hello/pom.xml" package
 RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/websapps
 EXPOSE 8080
-CMD ["systemctl enable tomcat9"]
+CMD systemctl enable tomcat9
