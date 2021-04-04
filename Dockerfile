@@ -7,7 +7,8 @@ RUN apt-get install tomcat9 -y
 RUN mkdir /home/sampleTest \
            cd /home/sampleTest \
            git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-RUN cd /home/sampleTest/boxfuse-sample-java-war-hello \
+WORKDIR /home/sampleTest
+RUN cd /boxfuse-sample-java-war-hello \
             mvn package
 RUN cp ./target/hello-1.0.war /var/lib/tomcat9/websapps
 EXPOSE 8080
