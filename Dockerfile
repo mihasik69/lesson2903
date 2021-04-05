@@ -2,7 +2,6 @@ FROM ubuntu:14.04
 COPY requirements.txt /tmp
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip
 RUN pip install --no-cache-dir -r requirements.txt
-CMD /usr/local/tomcat/bin/catalina.sh run
 COPY app.py app.py
 EXPOSE 5000
 CMD [ "python", "app.py" ]
